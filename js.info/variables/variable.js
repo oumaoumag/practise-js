@@ -1,7 +1,6 @@
 // A variable is a "named storage" for data.
 /* To create variables in JavaScript, use the `let` keyword.
     The statement below declares(creates) a variable with the name "message"*/
-
 let message;
  
 // Now, we can put some data into it by using the assignment operator `=`:
@@ -56,7 +55,7 @@ let user = 'John', age = 25, massage2 = 'Hello John!';
     alert(message); 
 
     // Variable naming
-/* There are tow limitations on variable names in JavaScript:
+/* There are tow limitations on variable names in  JavaScript:
         1. The name must contain only letters, digits, or the symbols `$` and `_`.
         2. The first character must n0ot be a digit.
     Examples of valid names:
@@ -65,10 +64,3 @@ let user = 'John', age = 25, massage2 = 'Hello John!';
     when the name constains multiple words, camelCase is commonly used. That is: words go one after another, each word except first starting with a capital letter: `myVeryLongName`
     Whats
     */ 
-
-
-
-
-
-
-
