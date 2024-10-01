@@ -33,9 +33,9 @@ let user = 'John', age = 25, massage2 = 'Hello John!';
      */
 
     // we can also change the values in the variables as many times as we want
-    let massage1;
+    let message1;
     message1 = 'Hello!';
-    massage1 = 'World!';
+    message1 = 'World!';
 
     alert(message);
     // When the value is changed, the old data is removed from the variable:
