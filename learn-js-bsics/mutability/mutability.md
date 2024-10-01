@@ -184,3 +184,93 @@ console.log(staff2)
 ```
 # What is Immutability in JavaScript
 Immutability is the state where values are immmutable (that is, not able to be changed). A value is immutable when altering it is impossible. Primitive data types are immutbale, as we discussed above.
+
+Let's llok at an example
+```JavaScript
+    const num = 4;
+    const newNum = num;
+```
+Looking at the code above, `num` was reassigned to `newNum`. Now both `num` and `newNum` have a value of `64`.
+Changine the value on `newNum` will not alter the value on `num`
+```JavaScript
+    let student1 = "Halina";
+
+    let student2 = student1;
+```
+In the code above,  a variable called `student1` was created and assigned to `student2`.
+```JavaScript
+    student = "Brookes"
+    console.log(student1);
+
+    console.log(student2);
+```
+
+Changing `student1` to `Brooks` does not change the initial value on `student2`. This proves that in primitive data types, actual values are copied, so both have their own. On the stack memory, `student1` and `student2` are distinct.
+
+The stack obeys the `Last-In-First-Out` principle. The first item that enters the stack is the last item to go out and vice versa. Accessing items stored in the stack is easy.
+
+## How to prevent Object Mutability
+So far you have learned that objects are mutable by default.
+```JavaScript
+
+const studentNames = {
+    student1: 'Halina',
+    student: "Brookes",
+    student3: "Anthony"
+}
+
+Object.defineProperty(studentNames, "student4",{
+    value: "Mirabel",
+})
+
+console.log(studentNames);
+```
+Now we've added `student4`.
+
+To prevent object `mutability`, you can use the `Object.preventExtensions()`,`Object.seal()`, and `Object.freeze()` methods.
+
+For all three methods, we will expolore adding properties using dot notation and the `define` property, modifying properties using defineProperty, and deleting properties.
+
+This will give you a better understanding of the capabilities and limitations of each method, and ultimately help you in determining which method may be best suited for a particular use case.
+
+So, let's dive in and explore these methods in moe detail.
+
+## How to use the `Object.preventExtensions` Method
+
+Here's the syntax of this method:
+
+`Object.preventExtensions(obj)`
+
+Using `Object.preventExtensions` stops new properties from entering the object. This object does not increase in size and maintains its properties. By default, all objects in JavaScript are extensible. With this method, you can delete properties from your object.
+
+## How to add new properties
++ Using `dot notation`:
+```JavaScript
+const makeNonExtensive = {
+    firstname: "Charles",
+    lastname: "Chandlier"
+}
+
+Object.preventExtensions(makeNonExtenive)
+
+makeNonExtensive.designation = "Software Engineer";
+
+console.log(makeNonExtensive)
+```
+
+Check the console - the `designation` property was not added and there's no error message.
+```JavaScript
+    const obj = {
+        firtname: "Derek",
+        designation: "Software Engineer"
+    }
+```
++ Using the `defineProperty` method
+
+Here's the syntax:
+```JavaScript
+Object.defineProperty(obj, prop, descriptor)
+```
+Here's what's going on in that code:
++ `obj`: The object you want to add properties to.
++ `prop`: You define the name of the property you want to add or change. It should be either a string or symbol 

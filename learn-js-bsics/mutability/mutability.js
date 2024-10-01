@@ -1,5 +1,5 @@
-let num = 5;
-console.log(typeof num);
+let num1 = 5;
+console.log(typeof num1);
 
 let str = 'string';
 console.log(typeof str);
@@ -111,3 +111,48 @@ staff4.age = 25;
 console.log('staff  :- ',staff)
 
 console.log('staff4 :- ',staff4)
+console.log()
+
+// Immutability in Js
+const num = 46;
+const newNum = num;
+console.log('newNum ', newNum)
+console.log()
+
+let student1 = "Halina";
+console.log("V1- student1:- ", student1)
+
+let student2 = student1
+
+student1 = "Brookes"
+console.log("V2 - student1", student1)
+console.log("stdnt 2: ",student2)
+console.log()
+
+// How to Prevent Object Mutability
+const studentNames = {
+    student1: 'Halina',
+    student2: "Brookes",
+    student3: "Anthony"
+}
+
+Object.defineProperty(studentNames, "student4", {
+    value: "Mirabel",
+})
+
+console.log(studentNames)
+console.log()
+
+// How to use `Object.preventExtensions` Method
+    // How to add new properties using
+       // 1. using `dot natation`
+    const makeNonExtensive = {
+        firtname: "Charles",
+        lastname: "Chandlier"
+    }
+
+   Object.preventExtensions(makeNonExtensive)
+
+    makeNonExtensive.designation = "Software Engineer";
+
+    console.log(makeNonExtensive)
