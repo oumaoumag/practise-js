@@ -91,6 +91,26 @@ console.log(coords[3][0])
 // Since keys are strings, we can use variables values to access our structures
 const myKey = 'name'
 
-//
+// and so if we give our brackets an identifer instead of a string
+// It will find the value of its's variable and use that as key.
+// so here :
+console.log(street[myKey])
+// our key is 'name', the value of myKey
+
+// But if we have written :
+console.log(street['myKey'])
+// now we are using a string again, those quotes here
+// and we didn't set any property with the key 'myKey' so, that's undefined
+
+// In fact you can write anything between those [] as long as it returns you a valid string
+console.log(userClement['last' + myKey])
+
+// You can use operators for Arrays too
+const start = 1 
+let position = 0
+
+console.log(allowedCountries[start + position++])
+console.log(allowedCountries[start + position++])
+console.log(allowedCountries[start+ position++])
 
 
