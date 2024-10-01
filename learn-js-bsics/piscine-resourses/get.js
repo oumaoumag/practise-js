@@ -113,4 +113,25 @@ console.log(allowedCountries[start + position++])
 console.log(allowedCountries[start + position++])
 console.log(allowedCountries[start+ position++])
 
+/*   Now since most of the time we don't need to do complicated access
+    like that, there is another, simplified way to acces values
+    that works only if your key is a valis identifie, introducing dot '.'  */
+console.log("UserClemets' name is ",userClement.address.street.name)
+// Now you might recognise this funny guy from 'console.log'
+// .id
+// That's right, console is an Object and 'log' is one of it's properties 
+// So  you have been using the simplified accessor since the beginning 
+// We could have written :
+
+console['log']('This is wirklich tedious...')
+ 
+// But no matter which way we write it, JavaScript will always convert keys
+// to string before accessing an Object property
+
+// Mixing arrays and objects
+
+console.log(users[1].address.street.number)
+console.log(users[0].address.street.number)
+// We can't use users.1 because, as syou know, 1 isn't a valid identifier
+
 
