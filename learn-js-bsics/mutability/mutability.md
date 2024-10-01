@@ -168,3 +168,19 @@ const newObj = {...obj}
 ```
 Using the `Spread` operator is quite simple. You need to place three dots `...` before the name of the object whose properties you intend to clone:
 ```JavaScript
+const staff = {
+    name : "Strengthened",
+    age: 43,
+    Hobbies: ["reading","Swimming"]
+}
+
+const staff3 = {...staff};
+
+staff2.age = 53;
+
+console.log(staff)
+
+console.log(staff2)
+```
+# What is Immutability in JavaScript
+Immutability is the state where values are immmutable (that is, not able to be changed). A value is immutable when altering it is impossible. Primitive data types are immutbale, as we discussed above.
