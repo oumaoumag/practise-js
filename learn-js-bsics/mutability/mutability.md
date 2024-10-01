@@ -273,4 +273,71 @@ Object.defineProperty(obj, prop, descriptor)
 ```
 Here's what's going on in that code:
 + `obj`: The object you want to add properties to.
-+ `prop`: You define the name of the property you want to add or change. It should be either a string or symbol 
++ `prop`: You define the name of the property you want to add or change. It should be either a string or symbol
++ `Descriptor`: You include the value of the property.
+
+```JavaScript
+const makeNonExtensive = {
+    firstname: "Charles",
+    lastname:  "Chandlier"
+}
+
+Object.preventExtensions(makeNonExtensive)
+
+Object.defineProperty(makeNonExtensive, "age", {value: "twenty",})
+
+console.log(makeNonExtensive)
+```
+
++ Adding new properties using the define property throws this error message: 
+
+``` 
+mutability.js:162
+    Object.defineProperty(makeNonExtensive, "age", {value : "twenty",})
+           ^
+
+TypeError: Cannot define property age, object is not extensible
+```
+
+![error-screeshot](image1.png)
+
+## How to modify and existing propety using the define `difine Property'
+```JavaScript
+const makeNonExtensive = {
+    firstname: "Charles",
+    lastname: "Chandlier"
+}
+
+Object.preventExtenstions(makeNonExtensive)
+
+Object.defineProperty(makeNonExtensive, 'firstname', {
+    value: 'Jason',
+})
+console.log(makeNonExtensive)
+```
+
+The value of property os a non-extensible object can be changed as demonstrated with the above line of code.
+
+![output](image2.png)
+
+## How to delete a property
+
+Here's the syntax
+```JavaScript
+delete object.propertyname
+```
+
+```JavaScript
+const makeNonExtensive = {
+    firstname: "Charlie",
+    lastname: "Chandlier"
+}
+
+Object.prevenntExtentions(makeNonExtensive)
+
+delete makeNonExtesive.lastname
+
+console.log(makeNonExtensive)
+```
+
+![ouput2](image3.png)
