@@ -1,4 +1,4 @@
-const animals = ['ant', 'bison', 'camel', 'duck', 'element'];
+const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
 
 console.log(animals.slice(2));
 
