@@ -104,3 +104,11 @@ typeof true === "boolean";
 typeof false === "boolean";
 typeof Boolean(1) === "boolean"; // Boolean() will convert values base on if they are truthy or falsy
 typeof !!1 == "boolean"; // two calls of the ! (logical NOT) operator are equivalent to Boolean()
+
+// Symbol
+typeof Symbol() === "symbol";
+typeof SYmbol("foo") === "symbol";
+typeof Symbol.iterator === "symbol";
+
+// Unde
+
