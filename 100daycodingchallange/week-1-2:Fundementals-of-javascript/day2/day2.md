@@ -1,0 +1,1 @@
+# Day 2: Write a function that takes a number as input and returns whether it's even or odd.
