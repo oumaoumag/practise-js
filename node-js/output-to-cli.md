@@ -29,6 +29,11 @@ console.log('My %s has %d ears', 'cat', '2')
   + `%i` format a variable as its interger part only
   + `%o` format a variable as an object
 
+Example : 
+```Js
 console.log('%o', Number);
+```
+
+
 
 
