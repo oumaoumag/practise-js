@@ -1,0 +1,1 @@
+Day 1: Create a program to calculate the area of a rectangle using user input for length and width.
