@@ -1,0 +1,1 @@
+# Day 5: Write a program that demonstrates variable scope by using global and local variables.
