@@ -1,0 +1,1 @@
+# Day 7: Write a program to create and print an object representing a car (brand, model, year).
