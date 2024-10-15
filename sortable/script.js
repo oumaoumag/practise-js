@@ -82,3 +82,34 @@ const includeFullName = (searchQuery) => {
     hero.biography.fullName.toLowerCase().includes(searchQuery.toLowerCase())
   );
 };
+
+// Sorting the Table
+// Sorting allows users to organize data by different columns, such as name, race or power stats.
+const sortTable = (column) => {
+  if (sortColumn === column) {
+    sortDirection = sortDirection === "asc" ? "desc" : "asc";
+  } else {
+    sortColumn = column;
+    sortDirection = "asc";
+  }
+
+  heroes.sort((a, b) => {
+    let aValue, bValue;
+  
+    switch (column) {
+      case "name":
+        aValue = a.name;
+        bValue = b.name;
+        break;
+        case "powerstats":
+          aValue = Object.values(a.powerstats).reduce((acc, val) => acc + val, 0);
+          bValue = Object.values(b.powerstats).reduce((acc, val) => acc + val, 0);
+          break;
+    }
+
+    if (aValue < bValue) return sortDirection === "asc" ? -1 : 1;
+    if (aValue > bValue) return sortDirection === "asc" ? 1 : -1;
+    return 0;
+});
+renderTable();
+}
