@@ -1,52 +1,45 @@
-<!DOCTYPE html>
+!<DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Superheroes Data</title>
-    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scalw=1.0">
+    <title>Superhero Table</title>
   </head>
   <body>
-    <h1>Superheroes</h1>
 
-    <select id="searchField">
-      <option value="name">Name</option>
-      <option value="fullName">Full Name</option>
-      <option value="placeOfBirth">Place of Birth</option>
-      <option value="alignment">Alignment</option>
-    </select>
-    <input type="text" id="search" placeholder="Search" autocomplete="off" />
+    <!-- Search bar for filtering -->
+    <input type="text" id="Search" placeholder="Search Heroes...">
 
-    <label for="pageSize">Select Page Size: </label>
+    <!-- Page size selector -->
+    <label for="pageSize">Page Size:</label>
     <select id="pageSize">
-      <option value="10">10</option>
-      <option value="20" selected>20</option>
+      <option value="20">20</option>
       <option value="50">50</option>
-      <option value="100">100</option>
-      <option value="all">All</option>
+      <option value="all">all</option>
     </select>
 
-    <table>
-      <thead>
-        <tr>
-          <th onclick="sortTable('image')">Icon</th>
-          <th onclick="sortTable('name')">Name</th>
-          <th onclick="sortTable('fullName')">Full Name</th>
-          <th onclick="sortTable('powerstats')">Powerstats</th>
-          <th onclick="sortTable('race')">Race</th>
-          <th onclick="sortTable('gender')">Gender</th>
-          <th onclick="sortTable('height')">Height</th>
-          <th onclick="sortTable('weight')">Weight</th>
-          <th onclick="sortTable('placeOfBirth')">Place Of Birth</th>
-          <th onclick="sortTable('alignment')">Alignment</th>
-        </tr>
-      </thead>
-      <tbody id="heroes-body"></tbody>
-    </table>
-
+    <!-- Pagination buttuns -->
     <button id="prev">Previous</button>
     <button id="next">Next</button>
 
-    <script src="script.js"></script>
+    <!-- Table to display superhero data -->
+    <table>
+      <thead>
+        <tr>
+          <th>Image</th>
+          <th>Name</th>
+          <th>Full Name</th>
+          <th>Powerstats</th>
+          <th>Race</th>
+          <th>Gender</th>
+          <th>Height</th>
+          <th>Place of Birth</th>
+          <th>Alignment</th>
+        </tr>
+      </thead>
+      <tbody id=""heroes-body></tbody>
+    </table>
+
+    <script src="app.js"></script>
   </body>
 </html>
