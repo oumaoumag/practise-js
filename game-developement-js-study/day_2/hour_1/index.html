@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Game Interface</title>
+    <style>
+        /* Basic layout styling */
+        html, body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        header, footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+        main {
+            display: flex;
+            padding: 20px;
+            flex: 1;
+        }
+        section#gameArea {
+            flex: 3;
+            background-color: #fff;
+            padding: 40px;
+            border: 1px solid #ccc;
+        }
+        aside#scoreboard {
+            flex: 1;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+
+        /* Styling the scoreboard for better organization */
+        #scoreboard dl {
+            display:  flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        /* Style the term (dt) */
+        #scoreboard dt {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* style the description (dd) */
+        #scoreboard dd {
+            margin: 0;
+            font-size: 1.2em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header role="banner">
+        <h1>My Awesome Game</h1>
+    </header>
+    <nav role="navigation">
+        <ul>
+            <li><a href="#" id="startGame" aria-label="Start Game">Start</a></li>
+            <li><a href="#" id="pauseGame" aria-label="Pause Game">Pause</a></li>
+            <li><a href="#" id="restartGame" aria-label="Restart Game">Restart</a></li>
+            <li><a href="#" id="settings" aria-label="Game Settings">Settings</a></li>
+        </ul>
+    </nav>
+    <main role="main">
+        <section id="gameArea">
+            <p>Game area placeholder. The game will render here.</p>
+        </section>
+        <aside id="scoreboard">
+            <h2>Scoreboard</h2>
+            <p>Time: <span id="gameTimer">00:00</span></p>
+            <p>Score: <span id="gameScore">0</span></p>
+            <p>Lives: <span id="gameLives">3</span></p>
+            <dl>
+                <dt>Level:</dt>
+                <dd id="gameLevel">1</dd>
+            </dl>
+        </aside>
+    </main>
+    <footer role="contentinfo">
+        <p>&copy; 2025 My Game</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confence WebPage</title>
+</head>
+    <header>
+        <img src="images/Untitled.jpeg" alt="crypto-confrence-logo" loading="lazy"/>
+        <h1> Kenya Blockchain & Crypto Confrence</h1>
+        <nav>
+            <ul>
+                <a href="#about">About</a>
+                <a href="#speakers">Speakers</a>
+                <a href="#schedule">Schedule</a>
+                <a href="#register">Register</a>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about">
+            <h2>About</h2>
+            <figure>
+                <img src="images/IMG_9689-768x512.jpg" alt="traders" loading="lazy">
+                <figcaption>Blockchain is the future</figcaption>
+              </figure>
+            <p>The Kenya Blockchain and crypto confrence (KBCC) is an established gathering of industry experts, thought leaders, and enthusiasts who are passionate about the transformative potential of blockchain, web3 and cryptocurrencies. KBCC marks a pivotal moment in the intersection of technology and economic developement on the African continent.</p>
+            <P>As a nexus of ideas, innovatoins, and collaborative efforts, the conference explores the transformative potential of blockchain technology in propelling Africa towards economic properity. The confrence brings together a diverse array of participants to discuss and showcase advancements in blockchain technology, its applications, and its role in shaping Africa's economic landscape.</P>
+        </section>
+
+        <section class="speakers">
+            <h2 class="section-title"> Speakers</h>
+
+           <article class="speaker-profile">
+            <header>
+                <h3 class="speaker-name">Ouma Ouma</h3>
+                <p class="speaker-title">Software Developer</p>
+            </header>
+                <figure class="speaker-image">
+                <img src="images/ouma.png" alt="User Profile Image" loading="lazy">
+                <figcaption>ouma, speaker at the event</figcaption>
+            </figure>
+               <aside>
+                <p class="speaker-bio">
+                    Ouma Ouma is a software engineer with over 5 years of experience in the field. he's passionate about blockchain developement.
+                  </p>
+               </aside>
+           </article>
+        </section>
+
+        <section class="schedule">
+            <h2>Schedule</h2>
+
+            <form action="/submit-form" method="post"> 
+                <fieldset>
+                    <legend>Get Ticket</legend>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your full name"><br><br>
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" required placeholder="Enter your email"><br><br>
+
+                <label for="ticket-type">Ticket Type</label>
+                <select id="ticket-type" name="ticket-type">
+                    <option value="vip">VIP</option>
+                    <option value="vip">General</option>
+                </select>
+                <label class="Terms and Condistions">Terms and Conditions</label>
+                </fieldset><br><br>
+
+                <label for="agree">
+                    <input type="checkbox" id="agree" name="agree" required>
+                    I agree to the terms and conditions
+                </label><br><br>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <section class="register">
+            <h2>register</h2>
+        </section>
+        
+
+        <footer class="footer">copyright © Ouma Ouma 2025</footer>
+    </main>
+
+<body>
+
+</body>
+
+</html>

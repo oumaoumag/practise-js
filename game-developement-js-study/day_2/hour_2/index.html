@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pac-Man Game Interface</title>
+    <style>
+        /* Basic layout styling */
+        html, body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        header, footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+        main {
+            display: flex;
+            flex: 1;
+            padding: 20px;
+        }
+        .content {
+            flex: 3;
+            display: flex;
+            flex-direction: column;
+        }
+        section {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+        }
+        aside#scoreboard {
+            flex: 1;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header role="banner">
+        <h1>Pac-Man: A Classic Reimagined</h1>
+    </header>
+    <nav role="navigation">
+        <ul>
+            <li><a href="#" id="startGame">Start</a></li>
+            <li><a href="#" id="pauseGame">Pause</a></li>
+            <li><a href="#" id="restartGame">Restart</a></li>
+            <li><a href="#" id="settings">Settings</a></li>
+        </ul>
+    </nav>
+    <main role="main">
+        <div class="content">
+            <section id="intro">
+                <h2>Introduction</h2>
+                <p>Welcome to Pac-Man! Guide Pac-Man through the maze, eat dots, and avoid ghosts.</p>
+            </section>
+            <section id="gameArea">
+                <h2>Game Area</h2>
+                <p>The Pac-Man game will be rendered here.</p>
+            </section>
+            <section id="instructions">
+                <h2>Instructions</h2>
+                <p>Use arrow keys to move, "P" to pause, and avoid ghosts to survive!</p>
+            </section>
+        </div>
+        <aside id="scoreboard">
+            <h2>Scoreboard</h2>
+            <p>Time: <span id="gameTimer">00:00</span></p>
+            <p>Score: <span id="gameScore">0</span></p>
+            <p>Lives: <span id="gameLives">3</span></p>
+        </aside>
+    </main>
+    <footer role="contentinfo">
+        <p>&copy; 2025 My Game</p>
+    </footer>
+</body>
+</html>
