@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style/styles.css">  
+    <title>Soshi App</title>
+</head>
+<body>
+    <header>
+        <h1>Soshy App</h1>
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#notification">Notification</a></li>
+            </ul>            
+        </nav>
+
+        <search>
+
+            <label>
+                Find and filter your query
+                <input type="search" id="query" />
+            </label>
+            <br>
+            <label>
+                <input type="checkbox" id="exact-only" />
+                Exact matches only
+            </label>
+
+            <section>
+                <h3>Results:</h3>
+                <ul id="results">
+                    <!-- search result content -->
+                </ul>
+                <output id="no-results">
+                    <!-- no results content -->
+                </output>
+            </section>
+        </search>
+    </header>
+
+    <!-- Main Area -->
+    <main>
+    <section class="content-area">
+        <section class="create-post">
+        <form id="post-form" enctype="multipart/form-data">
+            <textarea name="content" placeholder="what's on your mind?" maxlength="280" required></textarea> 
+
+            <input type="file" name="media" accept="image/*, video/*" />
+
+            <select name="visibility">
+                <option value="public">Public</option>
+                <option value="friends">Friends</option>
+                <option value="private">Only ME</option>
+            </select>
+
+            <button type="submit">Post</button>
+        </form> 
+        </section>
+
+    <section class="post-feed">
+        <article class="post" data-post-id="123">
+
+            <!-- Author Info -->
+             <header class="post-header">
+                <img src="images/ouma.png" alt="User Avatar" class="avatar" loading="lazy">
+                <section class="author-meta">
+                    <h2 class="author-name">Ouma Ouma</h2>
+                    <time datetime="2025-05-04T10:00">May 4, 2025 at 10:00 AM</time>
+                </section>
+             </header>
+
+             <!-- Post Content -->
+            <section>
+                <p>This is my first post on this platform! Excited to be here.</p>
+
+                <!-- Optional Image -->
+                 <figure class="post-image">
+                    <img src="images/sui.jpeg" alt="Post image description" loading="lazy">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+                 </figure>
+            </section>
+
+            <!-- Actions -->
+             <footer class="post-actions">
+                <button class="like-button" aria-label="Like post">
+                    <span class="like-count">5</span>
+                </button>
+
+                <!-- Only visible to the creator -->
+                 <button class="delete-button" aria-label="delete post">Delete</button>
+             </footer>
+
+             <!-- Comments -->
+            <details class="post-comments">
+                <summary>View Comments (3)</summary>
+                <ul class="comment-list">
+                    <li>
+                    <strong>John :</strong> Welcome
+                    </li>
+                    <li class="comment">
+                        <strong>Alex:</strong>Glad to  see you here.
+                    </li>
+                </ul>
+
+                <form class="comment-form">
+                    <input type="text" placeholder="Write a comment..." required>
+                    <button type="submit">Comment</button>
+                </form>
+            </details>
+        </article>
+    </section>
+    </section>
+</main>
+    <aside class="user-profile-sidebar" role="complementary">
+        <section class="profile-card">
+
+            <!-- Avatar and name -->
+             <section class="profile-header">
+                <img src="images/Untitled.jpeg" alt="User Avatar" class="profile-avatar" loading="lazy">
+                <h3 class="profile-name">Ouma Ouma</h3>
+             </section>
+
+             <!-- Bio /Status -->
+              <ul class="profile-stats">
+                <li><strong>Posts:</strong> 128</li>
+                <li><strong>Likes:</strong> 942</li>
+              </ul>
+        </section>
+    </aside>
+
+    <footer class="site-footer">
+        <section class="footer-content">
+
+            <!-- App Nmae -->
+             <p class="app-name">@ 2025 Soshy</p>
+
+             <!-- Footer Links -->
+              <nav class="footer-nav" aria-label="Footer links">
+                <ul>
+                    <li><a href="/terms">Terms</a></li>
+                    <li><a href="/privacy">Privacy</a></li>
+                    <li><a href="/help">Help</a></li>
+                </ul>
+              </nav>
+        </section>
+    </footer>
+</body>
+</html>
