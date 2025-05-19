@@ -4,13 +4,13 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: f0f0f0;
+    background-color: #f0f0f0;
 }
 
 #maze {
     display: grid;
-    grid-template-columns: repeat(5, 50px);
-    grid-template-columns: repeat(5, 50px);
+    grid-template-columns: repeat(10, 40px);
+    grid-template-rows: repeat(10, 40px);
     gap: 2px;
 }
 
