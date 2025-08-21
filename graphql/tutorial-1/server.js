@@ -1,11 +1,14 @@
 import express from "express";
 import { createHandler } from "graphql-http/lib/use/express";
 import { buildSchema } from "graphql";
+import { ruruHTML } from "ruru/server";
 
 // Construct a schema, using GraphQL schema language
 const schema = buildSchema(`
     type Query {
         hello: String
+        number: Int
+        name: String
     }
 `);
 
@@ -14,6 +17,12 @@ var rootValue = {
     hello() {
         return "Hello world!"
     },
+    number() {
+        return 5
+    },
+    name() {
+        return "Ouma Ouma"
+    }
 };
 
 const app = express();
@@ -26,6 +35,12 @@ app.all(
     rootValue: rootValue,
 })
 );
+
+// Serve the GraphiQL.
+app.get("/", (_req, res) => {
+    res.type("html");
+    res.end(ruruHTML({ endpoint: "/graphql" }));
+});
 
 // Start the server at port 4000
 app.listen(4000, () => {
