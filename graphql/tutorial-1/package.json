@@ -1,0 +1,16 @@
+{
+  "name": "tutorial-1",
+  "version": "1.0.0",
+  "description": "graphql tutorial",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "oumaoumag",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^5.1.0",
+    "graphql": "^16.11.0",
+    "graphql-http": "^1.22.4"
+  }
+}
